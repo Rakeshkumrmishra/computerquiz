@@ -155,13 +155,13 @@ const questions = [{
 {
     question: " One millisecond is",
     a: "1 second",
-    b: "10<sup>th</sup> of a seconds",
-    c: "1000<sup>th</sup> of a seconds",
-    d: "10000<sup>th</sup> of a seconds",
+    b: "10thof a seconds",
+    c: "1000th of a seconds",
+    d: "10000th of a seconds",
 },
 {
     question: " The output quality of a printer is measured by",
-    a: "Dot per sq inch<br>",
+    a: "Dot per sq inch",
     b: "Dot per inch",
     c: "Dots printed per unit time",
     d: "All of the above",
@@ -203,9 +203,9 @@ const questions = [{
 },
 {
     question: " High density double sided floppy disks could store _____ of data",
-    a: "40 MB<br>",
-    b: "44 GB<br>",
-    c: "40 GB<br>",
+    a: "40 MB",
+    b: "44 GB",
+    c: "40 GB",
     d: "44 MB",
 },
 {
@@ -273,10 +273,10 @@ const questions = [{
 },
 {
     question: " When was vacuum tube invented?",
-    a: "",
-    b: "",
-    c: "",
-    d: "",
+    a: "1900",
+    b: "1960",
+    c: "1910",
+    d: "1880",
 },
 {
     question: " Which of the following produces the best quality graphics reproduction?",
@@ -357,8 +357,8 @@ const questions = [{
 },
 {
     question: " If in a computer, 16 bits are used to specify address in a RAM, the number of addresses will be",
-    a: "",
-    b: "",
+    a: "216",
+    b: "65,536",
     c: "64K",
     d: "Any of the above",
 },
@@ -399,10 +399,10 @@ const questions = [{
 },
 {
     question: " The value of each bead in heaven is",
-    a: "",
-    b: "",
-    c: "",
-    d: "",
+    a: "1",
+    b: "3",
+    c: "5",
+    d: "7",
 },
 {
     question: " The first computer introduced in Nepal was",
@@ -462,10 +462,10 @@ const questions = [{
 },
 {
     question: " Each set of Napier’s bones consisted of ______ rods",
-    a: "",
-    b: "",
-    c: "",
-    d: "",
+    a: "5",
+    b: "9",
+    c: "11",
+    d: "13",
 },
 {
     question: " BCD is",
@@ -497,10 +497,10 @@ const questions = [{
 },
 {
     question: " How many address lines are needed to address each machine location in a 2048 x 4 memory chip?",
-    a: "",
-    b: "",
-    c: "",
-    d: "",
+    a: "10",
+    b: "11",
+    c: "8",
+    d: "12",
 },
 {
     question: " Properly arranged data is called",
@@ -525,9 +525,9 @@ const questions = [{
 },
 {
     question: " John Napier invented Logarithm in",
-    a: "",
-    b: "",
-    c: "",
+    a: "1614",
+    b: "1617",
+    c: "1620",
     d: "None of above",
 },
 {
@@ -609,10 +609,10 @@ const questions = [{
 },
 {
     question: " When was Pascaline invented?",
-    a: "",
-    b: "",
-    c: "",
-    d: "",
+    a: "1617",
+    b: "1620",
+    c: "1642",
+    d: "1837",
 },
 {
     question: " Which of the following statement is valid?",
