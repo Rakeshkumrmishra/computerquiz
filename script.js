@@ -322,9 +322,9 @@ const questions = [{
 },
 {
     question: " Today’s computer giant IBM was earlier known by different name which was changes in 1924",
-    a: "Tabulator Machine Co<br>",
-    b: "Computing Tabulating Recording Co<br>",
-    c: "The Tabulator Ltd<br>",
+    a: "Tabulator Machine Co",
+    b: "Computing Tabulating Recording Co",
+    c: "The Tabulator Ltd",
     d: "International Computer Ltd",
 },
 {
@@ -651,10 +651,10 @@ const questions = [{
 },
 {
     question: " in which year was UK’s premier computing event called ?The which computer? started?",
-    a: "",
-    b: "",
-    c: "",
-    d: "",
+    a: "1980",
+    b: "1985",
+    c: "1986",
+    d: "1987",
 },
 {
     question: " Once you load the suitable program and provide required data, computer does not need human intervention",
