@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        .round_point{
+            width: 55px;
+            height: 55px;
+            border-radius: 30%;
+            background-color: black;
+            position: fixed;
+            bottom: 10px;
+            left:15px;
+            z-index: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+    <section class="primary">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button data-mdb-collapse-init class="navbar-toggler" type="button"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                     
+                </button>
+                <p class="card-text text-cente text-primary pt-2 " id="clock"><span
+                    class="me-2">Time</span><span id="time"></span></p>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                            alt="MDB Logo" loading="lazy" />
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a data-mdb-dropdown-init class="text-reset me-3 dropdown-toggle hidden-arrow" href="#"
+                            id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                            href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
+                                height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </section>
+    <section style="margin-top: 80px;">
+        <div class="container">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6 class="card-title">MS Word MCQ Questions PART 3</h6>
+                </div>
+            </div>
+            <div id="quiz_body"></div>
+
+        </div>
+        </div>
+<div class="round_point" id="open-popup-btn">
+    <span class="text-light" style="font-size: 8px;">correct Point</span>
+    <span class="text-light" style="font-size: 20px;" id="scoreboard"></span>
+</div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./Word3.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      
+        let total = questions.length;
+        let right = 0;
+        let wrong = 0;
+        const quiz_body = document.getElementById("quiz_body")
+        // const optionInputs = document.querySelectorAll('.option')
+        const scoreboard = document.getElementById('scoreboard')
+        // const wornge_writeAns = document.getElementById('wornge_writeAns')
+        // const rightAnstag = document.getElementById('correct_ans')
+        // const wrongAnstag = document.getElementById('wrong_ans')
+        // const totalQuestion = document.getElementById('totalQuestion')
+          // Example index
+  // Fetch the question object at the specified index
+  let quizContent = '';  // Initialize an empty string to hold the quiz content
+function loadQuestion(){
+    scoreboard.innerText = `${right}`;
+for (let i = 0; i < questions.length; i++) {
+    const q = questions[i];
+    quizContent += `
+    <div class="card mb-2">
+    <div class="card-body">
+
+        <ul class="list-group list-group-light" >
+            <li class="list-group-item">
+                <p class="card-text " id="question">${i + 1}) ${q.question}</p>
+            </li>
+            <div class="form-check  mb-2">
+                <input class="form-check-input option" type="radio" name="${i}" value="A"
+                    id="flexRadioDefault${i}A" onchange="handleOptionChange(event)"  />
+                <label class="form-check-label " for="flexRadioDefault${i}A">${q.a} </label>
+            </div>
+            <div class="form-check  mb-2">
+                <input class="form-check-input option" type="radio" name="${i}" value="B"
+                    id="flexRadioDefault${i}B"  onchange="handleOptionChange(event)" />
+                <label class="form-check-label " for="flexRadioDefault${i}B">${q.b} </label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input option" type="radio" name="${i}" value="C"
+                    id="flexRadioDefault${i}C" onchange="handleOptionChange(event)"  />
+                <label class="form-check-label " for="flexRadioDefault${i}C">${q.c} </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input option" type="radio" name="${i}" value="D"
+                    id="flexRadioDefault${i}D" onchange="handleOptionChange(event)" />
+                <label class="form-check-label " for="flexRadioDefault${i}D">${q.d}
+                </label>
+            </div>
+           
+        </ul>
+        <div class="position-absolute " style="top: 20%;right: 50%; transform: translate(50%,50%);">
+                        <div class="animate__animated  text-primary  d-none "  id="correct_ans${i}">Correct Answer <i
+                                class="fa-solid fa-thumbs-up"></i></div>
+                       
+                    </div>
+           </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    `;
+   
+}
+}
+// Assuming there's an HTML element with id 'quiz_body' to display the quiz
+loadQuestion()
+quiz_body.innerHTML = quizContent;
+function handleOptionChange(event) {
+    const selectedOption = event.target.value;
+    const questionIndex = event.target.name;
+   
+    const data = answers[questionIndex]
+    const OptionID = `flexRadioDefault${questionIndex}${data}` ;
+    disableRadioButtonsByName(questionIndex);
+    showRightAns=document.getElementById(OptionID);
+    rightAnstag=document.getElementById(`correct_ans${questionIndex}`)
+   if(selectedOption===data){
+    right++;
+    
+    showRightAns.nextElementSibling.classList.add("text-primary")
+    rightAnstag.classList.remove('d-none');
+                rightAnstag.classList.add('animate__fadeOutUp');
+
+                // Remove animation class after animation ends
+                rightAnstag.addEventListener('animationend', function () {
+                    rightAnstag.classList.remove('animate__fadeOutUp');
+                    rightAnstag.classList.add('d-none');
+                });
+  
+} else{
+    wrong++;
+    showRightAns.nextElementSibling.classList.add("text-primary")
+    
+}
+scoreboard.innerText = `${right}`;
+         }
+
+       
+        
+                  </script>
+
+
+<script>
+    // Get the clock element
+    const clockElement = document.getElementById('clock');
+
+    let seconds = 0;
+    let minutes = 0;
+    let hours = 0;
+
+    // Update the clock display function
+    function updateClock() {
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+
+        // Format the time string
+        const timeString =
+            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        // Update the clock display
+        clockElement.textContent = `Time: ${timeString}`;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    function disableRadioButtonsByName(name) {
+    // Select all radio buttons with the given name
+    const radioButtons = document.querySelectorAll(`input[type="radio"][name="${name}"]`);
+    
+    // Loop through the NodeList and disable each radio button
+    radioButtons.forEach(radioButton => {
+        radioButton.disabled = true;
+    });
+}
+</script>
+<script>
+    document.getElementById('open-popup-btn').addEventListener('click', function() {
+        Swal.fire({
+            title: 'Quiz Details',
+            html: `
+                <p>Total No of Question: <strong>${total}</strong> </p>
+                <hr>
+                <p>Nos of question you are attend :<strong> ${right+wrong}</strong></p>
+                <p>Correct Answer :<strong> ${right}</strong></p>
+                <p>Wrong answers :<strong> ${wrong}</strong></em></p>
+            `,
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
+    });
+</script>
+
+</body>
+
+</html>
